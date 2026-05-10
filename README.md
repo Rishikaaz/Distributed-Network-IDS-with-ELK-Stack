@@ -1,4 +1,4 @@
-# 🛡️ Real-Time Host-Based IDS (HIDS) & SIEM Integration
+# 🛡️ Real-Time Host-Based IDS  & SIEM Integration
 
 A robust security architecture that transforms a Windows workstation into an Intelligent Intrusion Detection Sensor, shipping live security events to a centralized Kali Linux ELK (SIEM) stack for instant analysis.
 
