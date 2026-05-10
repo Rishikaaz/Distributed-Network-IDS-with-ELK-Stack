@@ -27,6 +27,7 @@ This project implements a multi-platform security monitoring solution. A Python-
 4. **Visualization:** Alerts are indexed and visualized in Kibana.
 
 # 🚦 Usage
+
 ##Configure Logstash
 Ensure your Logstash pipeline is listening on TCP 5000 with `json_lines` codec.
 
