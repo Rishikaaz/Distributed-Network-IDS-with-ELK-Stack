@@ -1,2 +1,36 @@
-# Distributed-Network-IDS-with-ELK-Stack
-a distributed SIEM-like pipeline using Elasticsearch, Logstash, and Kibana to aggregate and analyze high-volume security telemet
+# 🛡️ Real-Time Host-Based IDS (HIDS) & SIEM Integration
+
+A robust security architecture that transforms a Windows workstation into an Intelligent Intrusion Detection Sensor, shipping live security events to a centralized Kali Linux ELK (SIEM) stack for instant analysis.
+
+## 🚀 Overview
+This project implements a multi-platform security monitoring solution. A Python-based HIDS sensor on a Windows host sniffs network traffic, identifies malicious patterns (like port scans), and transmits enriched JSON alerts over a TCP socket to an ELK stack on Kali Linux.
+
+### Key Features
+* **Real-Time Packet Inspection:** Uses Scapy to analyze L3/L4 headers.
+* **Intelligent Alerting:** Automatically tags traffic hitting sensitive ports (80, 445, 22) with security context.
+* **Centralized Logging:** Persistent TCP streaming to Logstash.
+* **Elastic Search & Visualization:** Full query capabilities via Kibana.
+
+## 🛠️ Technology Stack
+- **Languages:** Python 3.x
+- **Libraries:** Scapy, Socket, JSON
+- **SIEM:** Elasticsearch, Logstash, Kibana (ELK)
+- **Environment:** Windows (Sensor), Kali Linux (SIEM)
+- **Tools:** Nmap (Attack Simulation)
+
+## 🏗️ Architecture
+![Architecture Diagram](docs/architecture.png)
+
+1. **Attack:** Kali Linux initiates an Nmap scan.
+2. **Detection:** Windows script intercepts the packet and applies an `alert` tag.
+3. **Transport:** Data is shipped via TCP Port 5000 to Logstash.
+4. **Visualization:** Alerts are indexed and visualized in Kibana.
+
+## 🚦 Usage
+1. **Configure Logstash:** Ensure your Logstash pipeline is listening on TCP 5000 with `json_lines` codec.
+2. **Run Sensor:** Execute `ids.py` as Administrator on the target Windows machine.
+3. **Simulate Attack:** Run `nmap -sT -p 445 [Windows_IP]` from Kali.
+4. **Analyze:** Open Kibana and filter by `alert : *`.
+
+---
+*Created by [Your Name]*
