@@ -1,11 +1,10 @@
 ```markdown
-# 🛠️ Logstash Configuration & Setup Guide
+🛠️ Logstash Configuration & Setup Guide
 ---
 
-## 1. Pipeline Configuration File
+1. Pipeline Configuration File
 
-**Command:**
-```bash
+Command:
 sudo nano /etc/logstash/conf.d/windows_ids.conf
 
 ```
@@ -13,7 +12,7 @@ sudo nano /etc/logstash/conf.d/windows_ids.conf
 **Configuration Content:**
 
 ```conf
-# 📥 Input: Listen for TCP traffic on Port 5000
+📥 Input: Listen for TCP traffic on Port 5000
 input {
   tcp {
     port => 5000
@@ -21,14 +20,14 @@ input {
   }
 }
 
-# ⚙️ Filter: Add metadata to incoming logs
+⚙️ Filter: Add metadata to incoming logs
 filter {
   mutate {
     add_tag => [ "windows_ids_sensor" ]
   }
 }
 
-# 📤 Output: Ship logs to Elasticsearch and Terminal
+📤 Output: Ship logs to Elasticsearch and Terminal
 output {
   elasticsearch {
     hosts => ["http://localhost:9200"]
