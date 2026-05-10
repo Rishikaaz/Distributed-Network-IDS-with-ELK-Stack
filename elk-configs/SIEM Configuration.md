@@ -1,12 +1,8 @@
 ```markdown
 # 🛠️ Logstash Configuration & Setup Guide
-
-This document outlines the steps to configure a Logstash pipeline to receive security events from the Windows HIDS sensor.
-
 ---
 
 ## 1. Pipeline Configuration File
-Create a new configuration file in the Logstash pipeline directory.
 
 **Command:**
 ```bash
