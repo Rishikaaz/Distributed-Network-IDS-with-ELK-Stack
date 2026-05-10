@@ -19,7 +19,7 @@ This project implements a multi-platform security monitoring solution. A Python-
 - **Tools:** Nmap (Attack Simulation)
 
 ## 🏗️ Architecture
-![Architecture Diagram](docs/architecture.png)
+![Architecture Diagram](/architecture.png)
 
 1. **Attack:** Kali Linux initiates an Nmap scan.
 2. **Detection:** Windows script intercepts the packet and applies an `alert` tag.
