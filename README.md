@@ -28,8 +28,25 @@ This project implements a multi-platform security monitoring solution. A Python-
 
 ## 🚦 Usage
 1. **Configure Logstash:** Ensure your Logstash pipeline is listening on TCP 5000 with `json_lines` codec.
-2. **Run Sensor:** Execute `ids.py` as Administrator on the target Windows machine.
-3. **Simulate Attack:** Run `nmap -sT -p 445 [Windows_IP]` from Kali.
-4. **Analyze:** Open Kibana and filter by `alert : *`.
 
+# Start all core services
+`sudo systemctl start elasticsearch kibana logstash`
+
+# Verify Logstash is listening on Port 5000
+`sudo tail -f /var/log/logstash/logstash-plain.log`
+
+2. **Run Sensor:** Execute `ids.py` as Administrator on the target Windows machine.
+Open Command Prompt as Administrator and execute:
+`python ids.py`
+
+3. **Simulate Attack:** from Kali.
+Trigger the detection logic using Nmap:
+`nmap -sT -p 80,445 [Windows_IP]`
+
+4. **Analyze:** Open Kibana and filter by `alert : *`.
+Navigate to http://localhost:5601.
+
+Create a Data View for windows-ids-logs*.
+
+Filter by alert : * in the Discover tab to view security events.
 ---
