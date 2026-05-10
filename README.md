@@ -26,13 +26,13 @@ This project implements a multi-platform security monitoring solution. A Python-
 3. **Transport:** Data is shipped via TCP Port 5000 to Logstash.
 4. **Visualization:** Alerts are indexed and visualized in Kibana.
 
-## 🚦 Usage
+# 🚦 Usage
 1. **Configure Logstash:** Ensure your Logstash pipeline is listening on TCP 5000 with `json_lines` codec.
 
-# Start all core services
+## Start all core services
 `sudo systemctl start elasticsearch kibana logstash`
 
-# Verify Logstash is listening on Port 5000
+## Verify Logstash is listening on Port 5000
 `sudo tail -f /var/log/logstash/logstash-plain.log`
 
 2. **Run Sensor:** Execute `ids.py` as Administrator on the target Windows machine.
@@ -47,6 +47,7 @@ Trigger the detection logic using Nmap:
 Navigate to http://localhost:5601.
 
 Create a Data View for windows-ids-logs*.
-
 Filter by alert : * in the Discover tab to view security events.
+
+
 ---
