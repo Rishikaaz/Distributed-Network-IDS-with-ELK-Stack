@@ -26,9 +26,10 @@ This project implements a multi-platform security monitoring solution. A Python-
 3. **Transport:** Data is shipped via TCP Port 5000 to Logstash.
 4. **Visualization:** Alerts are indexed and visualized in Kibana.
 
-# 🚦 Usage
+## 🚦 Usage
 
 ## Configure Logstash
+
 Ensure your Logstash pipeline is listening on TCP 5000 with `json_lines` codec.
 
 ## Start all core services
