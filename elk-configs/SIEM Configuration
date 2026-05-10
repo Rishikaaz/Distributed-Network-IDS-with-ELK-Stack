@@ -1,0 +1,29 @@
+To ingest the sensor data, configure the Logstash pipeline on your Kali machine:
+
+1. **Create the configuration:**
+   ```bash
+   sudo nano /etc/logstash/conf.d/windows_ids.conf
+
+2. Define the Pipeline:
+   input {
+  tcp {
+    port => 5000
+    codec => json_lines
+  }
+}
+filter {
+  mutate {
+    add_tag => [ "windows_ids_sensor" ]
+  }
+}
+output {
+  elasticsearch {
+    hosts => ["http://localhost:9200"]
+    index => "windows-ids-logs"
+  }
+  stdout { codec => rubydebug }
+}
+
+3. Restart Service:
+```bash
+sudo systemctl restart logstash
