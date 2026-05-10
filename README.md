@@ -35,15 +35,15 @@ This project implements a multi-platform security monitoring solution. A Python-
 ## Verify Logstash is listening on Port 5000
 `sudo tail -f /var/log/logstash/logstash-plain.log`
 
-2. **Run Sensor:** Execute `ids.py` as Administrator on the target Windows machine.
+## Run Sensor: Execute `ids.py` as Administrator on the target Windows machine.
 Open Command Prompt as Administrator and execute:
 `python ids.py`
 
-3. **Simulate Attack:** from Kali.
+## Simulate Attack from Kali.
 Trigger the detection logic using Nmap:
 `nmap -sT -p 80,445 [Windows_IP]`
 
-4. **Analyze:** Open Kibana and filter by `alert : *`.
+## Analyze Open Kibana and filter by `alert : *`.
 Navigate to http://localhost:5601.
 
 Create a Data View for windows-ids-logs*.
