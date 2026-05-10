@@ -27,7 +27,8 @@ This project implements a multi-platform security monitoring solution. A Python-
 4. **Visualization:** Alerts are indexed and visualized in Kibana.
 
 # 🚦 Usage
-1. **Configure Logstash:** Ensure your Logstash pipeline is listening on TCP 5000 with `json_lines` codec.
+##Configure Logstash
+Ensure your Logstash pipeline is listening on TCP 5000 with `json_lines` codec.
 
 ## Start all core services
 `sudo systemctl start elasticsearch kibana logstash`
@@ -45,6 +46,7 @@ Trigger the detection logic using Nmap:
 
 ## Analyze 
 Open Kibana and filter by `alert : *`.
+
 Navigate to http://localhost:5601.
 
 Create a Data View for windows-ids-logs*.
