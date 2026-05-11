@@ -3,7 +3,9 @@
 A robust security architecture that transforms a Windows workstation into an Intelligent Intrusion Detection Sensor, shipping live security events to a centralized Kali Linux ELK (SIEM) stack for instant analysis.
 
 ## 🚀 Overview
-This project implements a multi-platform security monitoring solution. A Python-based IDS sensor on a Windows host sniffs network traffic, identifies malicious patterns (like port scans), and transmits enriched JSON alerts over a TCP socket to an ELK stack on Kali Linux.
+This project implements a multi-platform security monitoring solution. A Python-based IDS sensor on a Windows host sniffs network traffic, identifies malicious patterns (like port scans), and transmits enriched JSON alerts over a TCP socket to an ELK stack on Kali Linux. 
+
+I have made the project walkthrough video for better understanding purpose->https://drive.google.com/file/d/1zRa8HpNQHjkqvb1CAWbWRlVmyXzf2k8W/view?usp=sharing
 
 ### Key Features
 * **Real-Time Packet Inspection:** Uses Scapy to analyze L3/L4 headers.
