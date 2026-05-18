@@ -21,6 +21,8 @@ I have made the project walkthrough video for better understanding purpose-> htt
 - **Tools:** Nmap (Attack Simulation)
 
 ## Repository Structure
+
+```text
 ├── ids.py
 ├── docker-compose.yml
 ├── logstash/
@@ -29,7 +31,7 @@ I have made the project walkthrough video for better understanding purpose-> htt
 ├── docs/
 │   └── architecture.png
 └── README.md
-
+```
 
 ## 🏗️ Architecture
 ![Architecture Diagram](/architecture.png)
