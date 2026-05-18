@@ -25,12 +25,14 @@ I have made the project walkthrough video for better understanding purpose-> htt
 ```text
 ├── ids-script.py
 ├── docker-compose.yml
+├── architecture.png
+├── README.md
 ├── logstash/
 │   └── pipeline/
 │       └── logstash.conf
-├── docs/
-│   └── architecture.png
-└── README.md
+└── kali-native-configs/
+    ├── logstash.conf
+    └── SIEM Configuration.md
 ```
 
 ## 🏗️ Architecture
