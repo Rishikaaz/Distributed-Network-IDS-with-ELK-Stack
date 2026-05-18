@@ -21,13 +21,13 @@ I have made the project walkthrough video for better understanding purpose-> htt
 - **Tools:** Nmap (Attack Simulation)
 
 ## Repository Structure
-├── ids.py                 
-├── docker-compose.yml   
+├── ids.py
+├── docker-compose.yml
 ├── logstash/
 │   └── pipeline/
-│       └── logstash.conf  
+│       └── logstash.conf
 ├── docs/
-│   └── architecture.png  
+│   └── architecture.png
 └── README.md
 
 
