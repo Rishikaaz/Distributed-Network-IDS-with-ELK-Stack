@@ -23,7 +23,7 @@ I have made the project walkthrough video for better understanding purpose-> htt
 ## Repository Structure
 
 ```text
-├── ids.py
+├── ids-script.py
 ├── docker-compose.yml
 ├── logstash/
 │   └── pipeline/
