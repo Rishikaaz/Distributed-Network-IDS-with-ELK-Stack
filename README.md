@@ -44,7 +44,7 @@ I have made the project walkthrough video for better understanding purpose-> htt
 4. **Visualization:** Alerts are indexed and visualized in Kibana.
 
 
-## 🚦 Deployment Option A: Docker Containers (Recommended)
+# 🚦 Deployment Option A: Docker Containers (Recommended)
 
 This method allows you to run the entire SIEM platform locally on your machine alongside the sensor via Docker without needing a separate virtual machine.
 
@@ -64,7 +64,7 @@ Scan: Run ```nmap -sT -p 80,445 127.0.0.1``` from a secondary terminal.
 
 Visualize: Navigate to ```http://localhost:5601``` to access Kibana, create a Data View for windows-ids-logs*, and monitor the Discover tab.
 
-## 🚦 Deployment Option B: Native Kali Linux Stack
+# 🚦 Deployment Option B: Native Kali Linux Stack
 
 If you prefer deploying the SIEM platform natively inside a dedicated Kali Linux virtual machine, use the configuration variants stored in the kali-native-configs/ folder.
 
@@ -75,13 +75,13 @@ Ensure your Logstash pipeline is listening on TCP port 5000 with the json_lines 
 ### 2. Service Initialization
 Run the following commands on your Kali machine to open network rules and start up the native ELK services:
 
-# Allow ingestion traffic through the firewall
+### Allow ingestion traffic through the firewall
 ```sudo ufw allow 5000/tcp```
 
-# Start core services
+### Start core services
 ```sudo systemctl start elasticsearch kibana logstash```
 
-# Verify the Logstash engine has successfully initialized the listener
+### Verify the Logstash engine has successfully initialized the listener
 ```sudo tail -f /var/log/logstash/logstash-plain.log```
 
 ### 3. Run Sensor
